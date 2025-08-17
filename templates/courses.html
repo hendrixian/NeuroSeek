@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Courses - LinguaASEAN{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/courses.css') }}">
+{% endblock %}
+
+{% block content %}
+    {% include 'includes/courses/header.html' %}
+    {% include 'includes/courses/filters.html' %}
+    {% include 'includes/courses/grid.html' %}
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/courses.js') }}"></script>
+{% endblock %}

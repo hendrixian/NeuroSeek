@@ -4,35 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>LinguaASEAN - Master Southeast Asian Languages</title>
+    <title>{% block title %}LinguaASEAN{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <!-- Add responsive font size scaling -->
-    <style>
-        html {
-            font-size: 100%;
-        }
-        @media (max-width: 768px) {
-            html {
-                font-size: 90%;
-            }
-        }
-        @media (max-width: 480px) {
-            html {
-                font-size: 85%;
-            }
-        }
-    </style>
+    {% block extra_css %}{% endblock %}
 </head>
 <body>
     {% include 'includes/header.html' %}
     
     <main class="main-content">
-        {% block content %}
-        {% endblock %}
+        {% block content %}{% endblock %}
     </main>
     
     {% include 'includes/footer.html' %}
     
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block extra_js %}{% endblock %}
 </body>
 </html>

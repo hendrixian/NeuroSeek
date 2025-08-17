@@ -1,8 +1,8 @@
-# LinguaASEAN - Language Learning Platform
+# NexaraAI - Language Learning Platform
 
 ## Overview
 
-LinguaASEAN is a responsive web application designed to help users master Southeast Asian languages through an immersive learning experience. The platform features AI-powered tools, interactive courses, and community features to facilitate language acquisition.
+NexaraAI is a responsive web application designed to help users master Southeast Asian languages through an immersive learning experience. The platform features AI-powered tools, interactive courses, and community features to facilitate language acquisition.
 
 ## Features
 
@@ -23,32 +23,41 @@ LinguaASEAN is a responsive web application designed to help users master Southe
 ## Project Structure
 
 ```
-NeuroSeek/
+NexaraAI/
 ├── app.py                  # Main Flask application
+├── README.md
+├── requirements.txt
+├── wsgi.py
 ├── static/
 │   ├── css/
-│   │   └── main.css        # All CSS from the original file
+│   │   ├── main.css        # Shared base styles
+│   │   └── course.css      # Course-specific styles
 │   └── js/
-│       └── main.js         # All JavaScript from the original file
+│       ├── main.js         # Shared JavaScript
+│       └── course.js       # Course-specific JavaScript
 ├── templates/
-│   ├── base.html           # Base template with common elements
-│   ├── home.html           # Homepage (extends base)
-│   ├── includes/           # Partial templates
-│   │   ├── header.html
-│   │   ├── footer.html
-│   │   ├── hero.html
-│   │   ├── features.html
-│   │   ├── stats.html
-│   │   └── cta.html
+│   ├── base.html           # Base template
+│   ├── home.html           # Homepage
+│   ├── courses.html        # Courses page
+│   └── includes/
+│       ├── header.html     # Shared header
+│       ├── footer.html     # Shared footer
+│       ├── hero.html       # Homepage hero
+│       ├── features.html   # Homepage features
+│       ├── stats.html      # Homepage stats
+│       ├── cta.html        # Homepage CTA
+│       └── course/         # Course page components
+│           ├── header.html # Course page header
+│           ├── filters.html # Course filters
+│           └── grid.html   # Course grid
 └── requirements.txt        # Python dependencies
-```
 
 ## Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/hendrixian/NeuroSeek.git
-   cd NeuroSeek
+   git clone https://github.com/hendrixian/NexaraAI.git
+   cd NexaraAI
    ```
 
 2. Create and activate a virtual environment:
